@@ -118,174 +118,220 @@ body {
     }
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
-/* Reset some default styles */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Page background and centering */
+/* Background */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1d2671, #c33764, #283c86, #45a247);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
 }
 
-
-/* Form container */
-form#signin {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
-  width: 350px;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Headline (optional if you add one) */
-form#signin h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+/* Sign up form */
+#signin {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    animation: fadeIn 1.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Labels */
-form#signin label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #444;
+#signin label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #ffffff;
 }
 
 /* Inputs */
-form#signin input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+#signin input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
 }
 
-form#signin input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0,123,255,0.4);
-  outline: none;
+#signin input:focus {
+    box-shadow: 0 0 0 2px #ffffff;
 }
 
 /* Submit button */
-form#signin button {
-  width: 100%;
-  padding: 14px;
-  background: #007bff;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+#signin button {
+    width: 100%;
+    padding: 13px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #1d2671;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
-form#signin button:hover {
-  background: #0056b3;
+#signin button:hover {
+    background: #1d2671;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
-/* Responsive tweaks */
+/* Mobile responsive */
 @media (max-width: 480px) {
-  form#signin {
-    width: 90%;
-    padding: 25px 20px;
-  }
+    #signin {
+        width: 90%;
+        padding: 30px;
+    }
 }
 
-/* Reset defaults */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Page background and centering */
+/* Background */
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #141e30, #243b55, #1d2671, #c33764);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
 }
 
-/* Form container */
-form#login {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 140, 0, 0.8);
-  width: 320px;
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Optional heading */
-form#login h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
+/* Login form */
+#login {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Labels */
-form#login label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #444;
+#login label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffffff;
+    font-size: 14px;
 }
 
 /* Inputs */
-form#login input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 4mm ridge #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+#login input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
 }
 
-form#login input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 6px rgba(0,123,255,0.4);
-  outline:none;
+#login input:focus {
+    box-shadow: 0 0 0 2px #c33764;
 }
 
-/* Submit button */
-form#login button {
-  width: 100%;
-  padding: 14px;
-  background: #667eea;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
+/* Register text */
+#login h3 {
+    font-size: 13px;
+    font-weight: 300;
+    color: #f1f1f1;
+    margin-bottom: 18px;
 }
 
-form#login button:hover {
-  background: #4a5fc1;
+#login h3 a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* Responsive tweaks */
+#login h3 a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+#login button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: #ffffff;
+    color: #1d2671;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#login button:hover {
+    background: #1d2671;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Mobile */
 @media (max-width: 480px) {
-  form#login {
-    width: 90%;
-    padding: 25px 20px;
-  }
-
+    #login {
+        width: 90%;
+        padding: 30px;
+    }
 }
+
