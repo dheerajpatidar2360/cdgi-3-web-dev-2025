@@ -1,4 +1,3 @@
-/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 * {
@@ -8,15 +7,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Animated background */
+/* Background */
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(-45deg, #1d2671, #c33764, #283c86, #45a247);
     background-size: 400% 400%;
     animation: gradientBG 10s ease infinite;
+
+    /* layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes gradientBG {
@@ -25,7 +27,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Main card */
+/* Main div */
 .header {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(12px);
@@ -36,6 +38,7 @@ body {
     animation: fadeIn 1.5s ease;
 }
 
+/* Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -47,7 +50,7 @@ body {
     }
 }
 
-/* Text styles */
+/* Text */
 .header h1 {
     font-size: 40px;
     color: #ffffff;
@@ -58,27 +61,26 @@ body {
     font-size: 18px;
     font-weight: 300;
     color: #f1f1f1;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-/* Buttons */
+/* Buttons (below div) */
 .btn {
+    margin-top: 25px;
     display: inline-block;
-    margin: 20px 10px 0;
-    padding: 14px 40px;
+    padding: 14px 42px;
     font-size: 16px;
-    font-weight: 500;
     border-radius: 30px;
     text-decoration: none;
-    transition: all 0.4s ease;
-    cursor: pointer;
+    transition: 0.4s ease;
 }
 
-/* Sign In button */
+/* Sign In */
 .btn-ghost {
-    color: #fff;
-    border: 2px solid #fff;
+    color: #ffffff;
+    border: 2px solid #ffffff;
     background: transparent;
+    margin-right: 10px;
 }
 
 .btn-ghost:hover {
@@ -87,11 +89,10 @@ body {
     transform: scale(1.08);
 }
 
-/* Login button */
+/* Login */
 .btn-primary {
     background: #ffffff;
     color: #1d2671;
-    border: none;
 }
 
 .btn-primary:hover {
@@ -100,7 +101,7 @@ body {
     transform: scale(1.08);
 }
 
-/* Responsive */
+/* Mobile responsive */
 @media (max-width: 600px) {
     .header {
         padding: 40px 25px;
@@ -109,7 +110,14 @@ body {
     .header h1 {
         font-size: 30px;
     }
+
+    .btn {
+        display: block;
+        margin: 15px auto 0;
+        width: 200px;
+    }
 }
+
 
 
 /* Reset some default styles */
